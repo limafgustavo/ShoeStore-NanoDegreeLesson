@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.udacity.shoestore.R
 
 
-class WecomeFragment : Fragment() {
+class WelcomeFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,7 @@ class WecomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wecome, container, false)
+        return inflater.inflate(R.layout.fragment_welcome, container, false)
     }
 
 
