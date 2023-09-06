@@ -9,11 +9,11 @@
         tools:context=".fragments.InstructionFragment">
 
 
-
         <TextView
             android:id="@+id/text_instruction_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:gravity="center_horizontal"
             android:text="Instruction Screen"
             android:textSize="18sp"
