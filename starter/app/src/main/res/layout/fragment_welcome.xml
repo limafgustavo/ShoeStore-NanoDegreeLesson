@@ -2,17 +2,49 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/welcome_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.WelcomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="18sp"
+        tools:context=".fragments.WelcomeFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--    * A new layout-->
+        <!--    * At least 2 textviews-->
+        <!--    * A navigation button with actions to navigate to the instructions screen-->
+
+
+        <TextView
+            android:id="@+id/text_welcome_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Welcome to our Shoe Store"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_welcome_about"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toTopOf="@id/button_navigate_instruction"
+            android:text="@string/loren_seven_lines"
+            app:layout_constraintTop_toBottomOf="@id/text_welcome_title"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/button_navigate_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instruction screen"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
