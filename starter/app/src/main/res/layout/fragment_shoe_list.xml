@@ -2,22 +2,66 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.ShoeListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ShoeListFragment">
 
 
-<!--    Create a new Shoe List destination that includes:-->
+        <!--    Create a new Shoe List destination that includes:-->
 
-<!--    * A new layout-->
-<!--    * A ScrollView-->
-<!--    * A LinearLayout for Shoe Items-->
-<!--    * A FloatingActionButton with an action to navigate to the shoe detail screen-->
-
-
+        <!--    * A new layout-->
+        <!--    * A ScrollView-->
+        <!--    * A LinearLayout for Shoe Items-->
+        <!--    * A FloatingActionButton with an action to navigate to the shoe detail screen-->
 
 
+        <ScrollView
+            android:id="@+id/scrollView_shoe_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Adidas new ballance"
+                        android:textColor="@android:color/black"
+                        android:textSize="26sp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floating_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+
+                        android:src="@drawable/ic_add" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
